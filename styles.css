@@ -1,0 +1,87 @@
+h1, h3, input {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 20px;
+    font-family: Arial, serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.inputs input {
+    width: 600Px;
+    height: 40px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.addTask {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+.tasks {
+    margin-top: 30px;
+    display: block;
+}
+
+.singleTask {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 1em;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.singleTask span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pointsSpan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border-radius: 99px;
+}
+
+.doneButton {
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+}
