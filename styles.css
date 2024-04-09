@@ -37,6 +37,14 @@ body {
     border-radius: 5px;
 }
 
+.color {
+    width: 200Px;
+    height: 40px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
 .addTask {
     margin-top: 10px;
     width: 100%;

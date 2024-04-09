@@ -5,7 +5,7 @@ let taskContainer = document.querySelector(".tasks")
 let number = localStorage.getItem("number");
 
 let myKeysValue = window.location.search
-let searchcParams = new URLSearchParams(myKeysValue)
+let searchParams = new URLSearchParams(myKeysValue)
 
 console.log(localStorage)
 
@@ -25,7 +25,17 @@ function LoadSite() {
             let pointsSpan = document.createElement("span")
             pointsSpan.classList.add("pointsSpan")
             pointsSpan.append(localStorage.getItem(`points[${i}]`))
-            pointsSpan.style.backgroundColor = searchcParams.get("color")
+
+            let colorSelect = document.querySelector(".color")
+            colorSelect.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    searchParams.set("color", colorSelect.value)
+                    console.log("a")
+                }
+            })
+
+            colorSelect.value = searchParams.get("color")
+            pointsSpan.style.backgroundColor = searchParams.get("color")
 
             task.append(nameSpan)
             task.append(pointsSpan)
@@ -50,10 +60,6 @@ addButton.addEventListener("click", () => {
     pointsSpan.append(points.value)
     pointsSpan.classList.add("pointsSpan")
     localStorage.setItem(`points[${localStorage.getItem("number")}]`, points.value)
-
-    if (searchParams.get("topic") === "red") {
-        pointsSpan.style.backgroundColor = "red"
-    }
 
     let dateOfCreation = new Date().getDate().toString()
     localStorage.setItem(`date[${localStorage.getItem("number")}]`, dateOfCreation)
